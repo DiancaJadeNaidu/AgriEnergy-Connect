@@ -1,0 +1,56 @@
+@model IEnumerable<ST10261874_PROG7311.ViewModels.FarmerViewModel>
+
+@{
+    ViewData["Title"] = "View Farmers";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Farmers</h2>
+            <form asp-controller="Employee" asp-action="SearchFarmers" method="get">
+                <div class="input-group mb-3">
+                    <input type="text" name="query" class="form-control" placeholder="Search farmers" />
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center">No farmers found.</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        @foreach (var farmer in Model)
+                        {
+                            <tr>
+                                <td>@farmer.Name</td>
+                                <td>@farmer.Email</td>
+                                <td>@farmer.PhoneNumber</td>
+                                <td>@farmer.Address</td>
+                                <td>
+                                    <a asp-controller="Employee" asp-action="ViewFarmerProducts" asp-route-email="@farmer.Email" class="btn btn-sm btn-info">View Products</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

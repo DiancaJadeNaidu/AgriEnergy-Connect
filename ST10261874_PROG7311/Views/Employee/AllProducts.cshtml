@@ -1,0 +1,68 @@
+@model IEnumerable<ST10261874_PROG7311.ViewModels.ProductViewModel> //model for displaying a list of products
+
+@{
+    ViewData["Title"] = "All Products"; //set page title
+}
+
+<div class="container mt-5"> //container for page content
+    <div class="row"> 
+        <div class="col-md-12">
+            <h2 class="mb-4">All Products</h2> //heading for the page
+            <form asp-action="AllProducts" method="get"> //form for filtering products
+                <div class="row mb-3">
+                    <div class="col">
+                        <input type="text" name="productName" class="form-control" placeholder="Search products"> //input for product name search
+                    </div>
+                    <div class="col">
+                        <input type="text" name="FarmerEmail" class="form-control" placeholder="Search by farmer"> //input for farmer email search
+                    </div>
+                    <div class="col">
+                        <select name="category" class="form-select"> //dropdown for selecting category
+                            <option value="">Category</option>
+                            <option value="Vegetables">Vegetables</option>
+                            <option value="Fruits">Fruits</option>
+                            <option value="Dairy">Dairy</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <input type="date" name="startDate" class="form-control"> //input for start date filter
+                    </div>
+                    <div class="col">
+                        <input type="date" name="endDate" class="form-control"> //input for end date filter
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary">Search</button> //submit button for search
+                    </div>
+                </div>
+            </form>
+            <table class="table table-striped"> //table for displaying products
+                <thead>
+                    <tr>
+                        <th>Product Name</th> //column for product name
+                        <th>Category</th> //column for product category
+                        <th>Production Date</th> //column for production date
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!Model.Any()) //check if no products are available
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center">No products found.</td> //message for no products found
+                        </tr>
+                    }
+                    else
+                    {
+                        @foreach (var product in Model) //iterate over each product in the model
+                        {
+                            <tr>
+                                <td>@product.Name</td> //display product name
+                                <td>@product.Category</td> //display product category
+                                <td>@product.ProductionDate.ToString("yyyy-MM-dd")</td> //display formatted production date
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

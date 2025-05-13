@@ -1,0 +1,187 @@
+@model ST10261874_PROG7311.Models.Farmer
+
+@{
+    ViewData["Title"] = "Add Farmer";
+}
+
+<!--external Styles -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+<style>
+    body {
+        background: linear-gradient(to right, #a8e063, #56ab2f);
+        min-height: 100vh;
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar {
+        background-color: #28a745;
+        width: 100%;
+    }
+
+    .navbar .nav-link {
+        color: white !important;
+        font-weight: 600;
+        padding: 0.75rem 1.25rem;
+    }
+
+    .card {
+        max-width: 600px;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 20px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-header {
+        background-color: #28a745;
+        color: white;
+        border-radius: 20px 20px 0 0;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .card-header h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .card-body {
+        background-color: white;
+        padding: 30px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .form-group label {
+        font-weight: 600;
+        font-size: 1.05rem;
+    }
+
+    .form-control {
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+    }
+
+    .form-control:focus {
+        border-color: #28a745;
+        box-shadow: 0 0 5px rgba(40, 167, 69, 0.4);
+    }
+
+    .btn-primary {
+        background-color: #28a745;
+        border: none;
+        padding: 12px;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #218838;
+    }
+
+    .text-danger {
+        font-size: 0.875rem;
+    }
+
+    .card-footer {
+        text-align: center;
+        background-color: #f8f9fa;
+        border-radius: 0 0 20px 20px;
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    .container-main {
+        padding: 20px;
+        width: 100%;
+    }
+</style>
+
+<!--navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container justify-content-center">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-user-plus"></i> Add Farmer</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-users"></i> View Farmers</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Form Card -->
+<div class="container-main d-flex justify-content-center align-items-center flex-column">
+    <div class="card">
+        <div class="card-header">
+            <h2><i class="fas fa-user-plus"></i> @ViewData["Title"]</h2>
+        </div>
+        <div class="card-body">
+            <form asp-action="AddFarmer" method="post">
+                <div class="form-group mb-3">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" placeholder="Enter full name" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Location"></label>
+                    <input asp-for="Location" class="form-control" placeholder="Enter farm location" />
+                    <span asp-validation-for="Location" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" placeholder="Enter email address" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="PhoneNumber"></label>
+                    <input asp-for="PhoneNumber" class="form-control" placeholder="Enter phone number" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Address"></label>
+                    <input asp-for="Address" class="form-control" placeholder="Enter address" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label asp-for="UserName"></label>
+                    <input asp-for="UserName" class="form-control" placeholder="Choose a username" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-plus-circle"></i> Submit Farmer
+                </button>
+            </form>
+        </div>
+        <div class="card-footer">
+            <small>Please ensure all fields are correctly filled before submitting.</small>
+        </div>
+    </div>
+</div>
+
+<!--scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

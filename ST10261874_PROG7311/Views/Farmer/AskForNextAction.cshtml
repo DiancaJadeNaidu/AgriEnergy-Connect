@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Add Another Product";
+}
+
+<h3>@ViewData["Message"]</h3>
+
+<!--action Buttons for User -->
+<div class="form-group mt-3">
+    <button type="button" class="btn btn-primary" onclick="window.location.href='@Url.Action("AddProduct", "Farmer")'">
+        Yes, Add Another Product
+    </button>
+    <button type="button" class="btn btn-secondary" onclick="window.location.href='@Url.Action("Index", "Farmer")'">
+        No, Go to Home Page
+    </button>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            //show Toastr success message
+            var message = '@Html.Raw(ViewData["Message"])';
+            if (message) {
+                toastr.success(message);
+            }
+        });
+    </script>
+}

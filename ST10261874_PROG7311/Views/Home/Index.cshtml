@@ -1,0 +1,181 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- Logo -->
+<div class="logo-container">
+    <img src="./images/agri_logo.png" alt="AgriEnergy Logo" class="logo-img">
+</div>
+
+<!-- Hero Section -->
+<div class="container-fluid landing-bg d-flex align-items-center">
+    <div class="container text-center text-md-left">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="landing-content animate__animated animate__fadeInLeft">
+                    <h1 class="display-3 text-success font-weight-bold">Welcome to AgriEnergy</h1>
+                    <p class="lead text-success font-italic">Empowering Farmers. Supporting Employees. Growing Together.</p>
+                    <a href="/Account/Login" class="btn btn-lg btn-primary mt-3 shadow">Login</a>
+                </div>
+            </div>
+            <div class="col-md-6 d-none d-md-block">
+                <div id="heroCarousel" class="carousel slide rounded shadow-lg animate__animated animate__fadeInRight" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="./images/slide3.jpg" class="d-block w-100" alt="Farmer 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/slide2.jpg" class="d-block w-100" alt="Farmer 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/slide1.jpg" class="d-block w-100" alt="Farmer 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div id="features" class="container mt-5 mb-5">
+    <h2 class="text-center text-success mb-5">Our Features</h2>
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <div class="feature-card shadow-lg p-4 bg-white rounded animate__animated animate__zoomIn">
+                <i class="fas fa-users fa-3x mb-3 text-primary"></i>
+                <h3>For Employees</h3>
+                <p>Easily manage farmer profiles, oversee products, monitor operations, and facilitate seamless communication with farmers through a centralized dashboard.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="feature-card shadow-lg p-4 bg-white rounded animate__animated animate__zoomIn animate__delay-1s">
+                <i class="fas fa-seedling fa-3x mb-3 text-success"></i>
+                <h3>For Farmers</h3>
+                <p>Empower your farming business by adding and updating products, tracking performance, managing sales, and engaging with the agricultural community.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="feature-card shadow-lg p-4 bg-white rounded animate__animated animate__zoomIn animate__delay-2s">
+                <i class="fas fa-cogs fa-3x mb-3 text-warning"></i>
+                <h3>Simple & Intuitive</h3>
+                <p>Designed with simplicity in mind. Our user-friendly interface ensures that every task—from product listing to communication—is quick, clear, and stress-free.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Styles -->
+<style>
+    .logo-container {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+    }
+
+    .logo-img {
+        max-width: 150px;
+        height: auto;
+    }
+
+    .landing-bg {
+        background-image: url('./images/backimage.avif');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        padding: 100px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .landing-content {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 40px;
+        border-radius: 12px;
+    }
+
+    .landing-content h1 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .landing-content p {
+        font-size: 1.4rem;
+    }
+
+    .feature-card {
+        padding: 30px;
+        border-radius: 15px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .feature-card i {
+        transition: transform 0.3s, color 0.3s;
+    }
+
+    .feature-card:hover i {
+        color: #ff6f61;
+        transform: scale(1.1);
+    }
+
+    .feature-card h3 {
+        color: #333;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .feature-card p {
+        color: #555;
+        font-size: 1rem;
+    }
+
+   
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f8f9fa;
+        color: #212529;
+    }
+
+    h2 {
+        font-family: 'Georgia', serif;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        padding: 12px 25px;
+        font-size: 1.2rem;
+        border-radius: 50px;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        transform: translateY(-3px);
+    }
+
+    .text-success {
+        color: #28a745 !important;
+    }
+</style>
+
+<!-- FontAwesome + Animate.css -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />

@@ -1,0 +1,60 @@
+<div class="container mt-5">
+    <!--top Bar with Logout -->
+    <div class="d-flex justify-content-end mb-4">
+        <form asp-controller="Account" asp-action="Logout" method="post">
+            <button type="submit" class="btn btn-outline-danger">
+                <i class="fas fa-sign-out-alt me-2"></i> Logout
+            </button>
+        </form>
+    </div>
+
+    <!--welcome Message -->
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-success">
+            Welcome, @(User.Identity?.Name ?? "Guest")
+        </h1>
+        <p class="lead">Empowering farmers with knowledge, tools, and support for a sustainable future.</p>
+    </div>
+
+    <!--dashboard Cards -->
+    <div class="row g-4">
+        <!-- Support -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-header bg-success text-white">
+                    <i class="fas fa-life-ring me-2"></i> Support
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Access support resources, contact customer service, and find answers to frequently asked questions.</p>
+                    <a href="@Url.Action("Support", "Farmer")" class="btn btn-outline-success w-100">Get Help</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Learn & Grow -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-header bg-info text-white">
+                    <i class="fas fa-book-reader me-2"></i> Learn & Grow
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Explore online courses and training on green energy and sustainable farming practices.</p>
+                    <a href="@Url.Action("LearnAndGrow", "Farmer")" class="btn btn-info text-white w-100">Browse Courses</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collaborate & Get Funded -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-header bg-primary text-white">
+                    <i class="fas fa-handshake me-2"></i> Collaborate & Get Funded
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Connect with experts and explore grants, subsidies, and joint project opportunities.</p>
+                    <a href="@Url.Action("CollaborateAndGetFunded", "Farmer")" class="btn btn-primary w-100">View Opportunities</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

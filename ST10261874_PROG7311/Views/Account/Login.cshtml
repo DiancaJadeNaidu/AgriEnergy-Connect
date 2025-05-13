@@ -1,0 +1,138 @@
+@model ST10261874_PROG7311.ViewModels.LoginViewModel //model for login view
+
+@{
+    ViewData["Title"] = "Login"; //set page title
+}
+
+<!--login page styling -->
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #4CAF50, #81C784); //background gradient for full screen
+    }
+
+    .full-height-wrapper {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center; //center login container vertically and horizontally
+    }
+
+    .login-container {
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); //container styling
+        width: 100%;
+        max-width: 450px;
+        padding: 40px;
+        animation: fadeIn 0.5s ease-out;
+    }
+
+    .login-header {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #4CAF50; //header text styling
+    }
+
+    .login-header h2 {
+        margin: 0;
+        font-weight: 700; //bold header
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: #333; //label styling
+    }
+
+    .form-control {
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 1rem; //input field styling
+    }
+
+    .form-check-label {
+        font-weight: 500;
+        color: #4CAF50; //checkbox label styling
+    }
+
+    .btn-primary {
+        background-color: #4CAF50;
+        border-color: #4CAF50;
+        border-radius: 25px;
+        padding: 10px 25px;
+        font-size: 1rem;
+        width: 100%;
+        transition: all 0.3s ease; //button styling
+    }
+
+    .btn-primary:hover {
+        background-color: #45a049;
+        border-color: #45a049; //hover effect for button
+    }
+
+    .forgot-password {
+        display: block;
+        text-align: right;
+        margin-top: 10px;
+        font-size: 0.9rem;
+        text-decoration: none;
+        color: #4CAF50;
+        transition: color 0.3s ease; //link styling
+    }
+
+    .forgot-password:hover {
+        color: #388E3C; //hover effect for link
+    }
+
+    .alert-danger {
+        border-radius: 10px;
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 10px 15px;
+        margin-bottom: 20px;
+        font-weight: 500; //alert message styling
+    }
+</style>
+
+<!--login Form -->
+<div class="full-height-wrapper"> //wrapper to center content
+    <div class="login-container"> //main login box
+        <div class="login-header">
+            <h2><i class="fas fa-sign-in-alt"></i> Welcome Back</h2> //welcome header
+            <p>Please log in to continue</p>
+        </div>
+
+        @if (ViewData.ModelState.IsValid && ViewData["InvalidLoginAttempt"] != null) //check for invalid login
+        {
+            <div class="alert alert-danger">
+                @ViewData["InvalidLoginAttempt"] //display error message
+            </div>
+        }
+
+        <form asp-action="Login" method="post" novalidate> //form submission
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label">Email</label> //email label
+                <input asp-for="Email" class="form-control" placeholder="Enter your email" required /> //email input
+                <span asp-validation-for="Email" class="text-danger"></span> //email validation
+            </div>
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label">Password</label> //password label
+                <input asp-for="Password" class="form-control" type="password" placeholder="Enter your password" required /> //password input
+                <span asp-validation-for="Password" class="text-danger"></span> //password validation
+            </div>
+            <div class="mb-3 form-check">
+                <input asp-for="RememberMe" class="form-check-input" id="RememberMe" /> //remember me checkbox
+                <label class="form-check-label" for="RememberMe">Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-lock"></i> Login //login button with icon
+            </button>
+            <a href="#" class="forgot-password">Forgot password?</a> //forgot password link
+        </form>
+    </div>
+</div>
+
+<!-- Font Awesome Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> //font awesome script
