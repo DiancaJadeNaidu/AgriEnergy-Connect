@@ -1,23 +1,23 @@
-@model IEnumerable<ST10261874_PROG7311.ViewModels.ProductViewModel> //model for displaying a list of products
+@model IEnumerable<ST10261874_PROG7311.ViewModels.ProductViewModel>
 
 @{
-    ViewData["Title"] = "All Products"; //set page title
+    ViewData["Title"] = "All Products";
 }
 
-<div class="container mt-5"> //container for page content
+<div class="container mt-5">
     <div class="row"> 
         <div class="col-md-12">
-            <h2 class="mb-4">All Products</h2> //heading for the page
-            <form asp-action="AllProducts" method="get"> //form for filtering products
+            <h2 class="mb-4">All Products</h2>
+            <form asp-action="AllProducts" method="get">
                 <div class="row mb-3">
                     <div class="col">
-                        <input type="text" name="productName" class="form-control" placeholder="Search products"> //input for product name search
+                        <input type="text" name="productName" class="form-control" placeholder="Search products">
                     </div>
                     <div class="col">
-                        <input type="text" name="FarmerEmail" class="form-control" placeholder="Search by farmer"> //input for farmer email search
+                        <input type="text" name="FarmerEmail" class="form-control" placeholder="Search by farmer">
                     </div>
                     <div class="col">
-                        <select name="category" class="form-select"> //dropdown for selecting category
+                        <select name="category" class="form-select">
                             <option value="">Category</option>
                             <option value="Vegetables">Vegetables</option>
                             <option value="Fruits">Fruits</option>
@@ -25,39 +25,39 @@
                         </select>
                     </div>
                     <div class="col">
-                        <input type="date" name="startDate" class="form-control"> //input for start date filter
+                        <input type="date" name="startDate" class="form-control">
                     </div>
                     <div class="col">
-                        <input type="date" name="endDate" class="form-control"> //input for end date filter
+                        <input type="date" name="endDate" class="form-control">
                     </div>
                     <div class="col">
-                        <button type="submit" class="btn btn-primary">Search</button> //submit button for search
+                        <button type="submit" class="btn btn-primary">Search</button>
                     </div>
                 </div>
             </form>
-            <table class="table table-striped"> //table for displaying products
+            <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Product Name</th> //column for product name
-                        <th>Category</th> //column for product category
-                        <th>Production Date</th> //column for production date
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Production Date</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @if (!Model.Any()) //check if no products are available
+                    @if (!Model.Any())
                     {
                         <tr>
-                            <td colspan="4" class="text-center">No products found.</td> //message for no products found
+                            <td colspan="4" class="text-center">No products found.</td>
                         </tr>
                     }
                     else
                     {
-                        @foreach (var product in Model) //iterate over each product in the model
+                        @foreach (var product in Model)
                         {
                             <tr>
-                                <td>@product.Name</td> //display product name
-                                <td>@product.Category</td> //display product category
-                                <td>@product.ProductionDate.ToString("yyyy-MM-dd")</td> //display formatted production date
+                                <td>@product.Name</td>
+                                <td>@product.Category</td>
+                                <td>@product.ProductionDate.ToString("yyyy-MM-dd")</td>
                             </tr>
                         }
                     }

@@ -1,11 +1,3 @@
-C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\ST10261874_PROG7311.csproj.AssemblyReference.cache
-C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\ST10261874_PROG7311.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\ST10261874_PROG7311.AssemblyInfoInputs.cache
-C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\ST10261874_PROG7311.AssemblyInfo.cs
-C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\ST10261874_PROG7311.csproj.CoreCompileInputs.cache
-C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\ST10261874_PROG7311.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\ST10261874_PROG7311.RazorAssemblyInfo.cache
-C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\ST10261874_PROG7311.RazorAssemblyInfo.cs
 C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\bin\Debug\net9.0\appsettings.json
 C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\bin\Debug\net9.0\ST10261874_PROG7311.staticwebassets.runtime.json
@@ -150,6 +142,14 @@ C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\bin\Debug\net9.0\runtimes\win\lib\
 C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\ST10261874_PROG7311.csproj.AssemblyReference.cache
+C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\ST10261874_PROG7311.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\ST10261874_PROG7311.AssemblyInfoInputs.cache
+C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\ST10261874_PROG7311.AssemblyInfo.cs
+C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\ST10261874_PROG7311.csproj.CoreCompileInputs.cache
+C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\ST10261874_PROG7311.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\ST10261874_PROG7311.RazorAssemblyInfo.cache
+C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\ST10261874_PROG7311.RazorAssemblyInfo.cs
 C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\scopedcss\bundle\ST10261874_PROG7311.styles.css
 C:\Users\GAMING PC\PROG3A\ST10261874_PROG7311\obj\Debug\net9.0\scopedcss\projectbundle\ST10261874_PROG7311.bundle.scp.css
